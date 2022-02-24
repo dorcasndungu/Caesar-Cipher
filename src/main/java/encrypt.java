@@ -46,19 +46,20 @@
 
     char[] receivedChars = receivedString.toUpperCase().toCharArray();
     String alphabetList = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    char space=' ';
-    StringBuilder encryptedText = new StringBuilder();
-      for (char receivedChar : receivedChars) {
-          if (receivedChar == space) {
-              encryptedText.append(space);
-          } else {
-              int cIndex = alphabetList.indexOf(receivedChar);
-              int encryptedIndex = (cIndex + encryptKey) % 26;
-              char encryptedLetter = alphabetList.charAt(encryptedIndex);
-              encryptedText.append(encryptedLetter);
+    String encryptedText = "";
 
+      for (int i = 0; i<receivedChars.length; i++) {
+          if(receivedChars[i]==' '){
+              encryptedText+=' ';
+          }
+          else{
+              int charIndex = alphabetList.indexOf(receivedChars[i]);
+              int encryptedIndex = (charIndex + encryptKey) % 26;
+              char encryptedLetter = alphabetList.charAt(encryptedIndex);
+              encryptedText=encryptedText+encryptedLetter;
           }
       }
-    return encryptedText.toString();
+
+    return encryptedText;
   }
 };

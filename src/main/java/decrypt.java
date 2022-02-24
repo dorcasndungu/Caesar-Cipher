@@ -49,16 +49,22 @@ public class decrypt {
         String decryptedText = "";
         int negativeDecryptedIndex=26;
         for (Integer i=0;i<receivedChars.length;i++) {
-            int cIndex = alphabetList.indexOf(receivedChars[i]);
-            int differenceIndex=(cIndex - decryptKey);
-            int decryptedIndex = (differenceIndex % 26);
-            //when decryptedIndex is a negative number
-            if(decryptedIndex<0){
-                negativeDecryptedIndex += decryptedIndex;
-                decryptedIndex=negativeDecryptedIndex;
+            if(receivedChars[i]==' '){
+                decryptedText+=' ';
             }
-            char decryptedLetter = alphabetList.charAt(decryptedIndex);
-            decryptedText=decryptedText+decryptedLetter;
+            else{
+                int cIndex = alphabetList.indexOf(receivedChars[i]);
+                int differenceIndex=(cIndex - decryptKey);
+                int decryptedIndex = (differenceIndex % 26);
+                //when decryptedIndex is a negative number
+                if(decryptedIndex<0){
+                    negativeDecryptedIndex += decryptedIndex;
+                    decryptedIndex=negativeDecryptedIndex;
+                }
+                char decryptedLetter = alphabetList.charAt(decryptedIndex);
+                decryptedText=decryptedText+decryptedLetter;
+            }
+
         }
 
         return decryptedText;
