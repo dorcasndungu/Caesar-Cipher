@@ -29,8 +29,8 @@ public class encryptTest{
 
     @Test
     public void encryptionWorks() {
-            encrypt encrypt=new encrypt("ANIMAL",2);
-            assertEquals("CPKOCN",encrypt.encryption());
+            encrypt encrypt=new encrypt("DORCAS",2);
+            assertEquals("FQTECU",encrypt.encryption());
             }
 
 
