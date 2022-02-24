@@ -46,7 +46,7 @@ Dorcas Ndung'u
 
 **Author's information**
 
-I am a programmer currently studying at Moringa School.
+I am currently studying at Moringa School.
 
 ### License
 This software is under the [MIT](LICENSE) license
