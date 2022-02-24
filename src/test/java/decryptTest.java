@@ -29,8 +29,8 @@ public class decryptTest {
 
     @Test
     public void decryptionWorks() {
-        decrypt decrypt=new decrypt("CPKOCN",2);
-        assertEquals(":ANIMAL",decrypt.decryption());
+        decrypt decrypt=new decrypt("CPKOCN rs",2);
+        assertEquals("ANIMAL PQ",decrypt.decryption());
     }
 
 }
