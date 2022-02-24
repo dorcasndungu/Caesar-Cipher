@@ -35,7 +35,7 @@ decrypted alphabet index=(alphabet index-key)%26
 * Intellij IDE
     
 ## Known Bugs
-The program does not encrypt messages with spaces at the moment.
+There are no known bugs at the moment.
 
 ## Support and contact details
 You are free to contribute and make adjustments .Do not hesitate to reach out in case of any enquiries,my details are in my bio.
